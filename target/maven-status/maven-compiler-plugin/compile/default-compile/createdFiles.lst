@@ -1,0 +1,4 @@
+com\mystore\pageobjects\IndexPage.class
+org\example\Main.class
+com\mystore\pageobjects\LoginPage.class
+com\mystore\pageobjects\AccountCreationPage.class
