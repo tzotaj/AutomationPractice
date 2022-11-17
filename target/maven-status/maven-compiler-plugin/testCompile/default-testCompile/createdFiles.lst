@@ -1,0 +1,9 @@
+com\pageobjects\ReadConfigFile.class
+com\pageobjects\IndexPage.class
+com\tests\LoginPageTest.class
+com\tests\AccountCreationPageTest.class
+com\OpenBrowser.class
+com\pageobjects\LoginPage.class
+com\pageobjects\AccountCreationPage.class
+com\mystore\BaseClass.class
+com\pageobjects\AddToCard.class

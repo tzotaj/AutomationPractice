@@ -1,10 +1,9 @@
 package com.tests;
-import com.pageobjects.AccountCreationPage;
+
 import com.OpenBrowser;
 import com.pageobjects.AccountCreationPage;
-import jdk.jpackage.internal.Log;
-import org.testng.annotations.Test;
 import com.pageobjects.LoginPage;
+import org.testng.annotations.Test;
 
 public class AccountCreationPageTest extends OpenBrowser {
 
@@ -20,7 +19,6 @@ public class AccountCreationPageTest extends OpenBrowser {
         login.loginUser("test","test2");
         createAccount= new AccountCreationPage(chrome);
         createAccount.createNewAccount();
-
 
 
 

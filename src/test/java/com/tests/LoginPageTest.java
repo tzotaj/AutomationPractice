@@ -1,9 +1,8 @@
 package com.tests;
 
 import com.OpenBrowser;
-import com.mystore.BaseClass;
-import org.testng.annotations.Test;
 import com.pageobjects.LoginPage;
+import org.testng.annotations.Test;
 
 
 public class LoginPageTest extends OpenBrowser {
@@ -16,7 +15,8 @@ public class LoginPageTest extends OpenBrowser {
 
            login= new LoginPage(chrome);
 
-           login.loginUser("tedi","1234");
+           login.loginUser("standard_user","secret_sauce");
+
        }
 
 

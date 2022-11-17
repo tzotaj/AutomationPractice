@@ -1,28 +1,19 @@
 package com.pageobjects;
-import com.mystore.BaseClass;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import javax.xml.xpath.XPath;
 
 import static org.testng.Assert.assertEquals;
 
 
 public class LoginPage {
-    //Locators
-//    @FindBy(xpath="//a[contains(.,'Sign in')]")
-//    WebElement PageSignin;
 
-    private final By LoginBtn = By.xpath("//a[contains(.,'Sign in')]");
-    private final By LoginEmail = By.id("email");
-    private final By LoginPassword = By.id("passwd");
 
-    private final By SubmitLogin = By.id("SubmitLogin");
+    private final By LoginUsername = By.id("user-name");
+    private final By LoginPassword = By.id("password");
 
+    private final By SubmitLogin = By.name("login-button");
+    private final By Title= By.xpath("//span[contains(text(),'Products')]");
 
 
 
@@ -32,18 +23,22 @@ public class LoginPage {
         this.chrome = chrome;
     }
 
-    public void loginUser(String email, String password) throws InterruptedException {
+    public void loginUser(String user, String password) throws InterruptedException {
 
 
-        chrome.findElement(LoginBtn).click();
+
+        //Thread.sleep(2000);
+        chrome.findElement(LoginUsername).sendKeys(user);
         Thread.sleep(2000);
-        chrome.findElement(LoginEmail).sendKeys(email);
         chrome.findElement(LoginPassword).sendKeys(password);
+        Thread.sleep(2000);
         chrome.findElement(SubmitLogin).click();
-       // Assert.assertEquals(ExpectedText,"Test");
+        Thread.sleep(2000);
+        //Assert.assertEquals(Title,"Products");
 
-        String ExpectedText = chrome.findElement(By.xpath("")).getText(); //get text lexon string, merr vleren e stringut;
-        assertEquals("IRCTC railways",ExpectedText);
+        String ExpectedText = chrome.findElement(Title).getText(); //get text lexon string, merr vleren e stringut;
+        assertEquals("PRODUCTS",ExpectedText);
 }
+
 
 }
