@@ -13,11 +13,11 @@ public class Checkout {
 
     public final By continueButton = By.id("continue");
 
-    private final By Information= By.xpath("//class[contains(text(),'summary_value_label')]");
+    private final By Information= By.xpath("//div[contains(text(),'FREE PONY EXPRESS DELIVERY!')]");
 
     public final By submitOrder = By.id("finish");
 
-    public final By finalMessage = By.xpath("//class[contains(text(),'complete-header')]");
+    public final By finalMessage = By.xpath("//h2[contains(text(),'THANK YOU FOR YOUR ORDER')]");
 
     WebDriver chrome;
 
@@ -41,6 +41,7 @@ public class Checkout {
 
         String finalText = chrome.findElement(finalMessage).getText();
         assertEquals("THANK YOU FOR YOUR ORDER",finalText);
+        Thread.sleep(2000);
 
 
     }

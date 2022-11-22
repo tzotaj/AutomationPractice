@@ -12,7 +12,7 @@ public class YourCard {
     private final By ProductTitle= By.className("inventory_item_name");
     private final By Checkout= By.id("checkout");
 
-    private final By CheckoutTitle = By.xpath("//class[contains(text(),'Checkout: Your Information')]");
+    private final By CheckoutTitle = By.xpath("//span[contains(text(),'Checkout: Your Information')]");
     WebDriver chrome;
 
     public YourCard(WebDriver chrome){
@@ -20,15 +20,16 @@ public class YourCard {
 
     }
 
-    public void viewCard(){
+    public void viewCard() throws InterruptedException {
 
         chrome.findElement(Basket).click();
         String ExpectedText = chrome.findElement(ProductTitle).getText();
         assertEquals("Sauce Labs Backpack",ExpectedText);
-
+        Thread.sleep(3000);
         chrome.findElement(Checkout).click();
         String ExpectedText2 = chrome.findElement(CheckoutTitle).getText();
         assertEquals("CHECKOUT: YOUR INFORMATION",ExpectedText2);
+        Thread.sleep(3000);
 
 
     }

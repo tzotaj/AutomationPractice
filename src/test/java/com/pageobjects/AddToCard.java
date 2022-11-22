@@ -8,6 +8,8 @@ public class AddToCard {
     public final  By addToCard = By.id("add-to-cart-sauce-labs-backpack");
     public final  By remove = By.id("remove-sauce-labs-backpack");
 
+    private final By Title= By.xpath("//span[contains(text(),'Products')]");
+
     WebDriver chrome;
 
     public AddToCard(WebDriver chrome){
@@ -16,8 +18,13 @@ public class AddToCard {
     }
     public void addCard(){
 
-        chrome.findElement(addToCard).click();
+        Boolean Locator= chrome.findElement(Title).isDisplayed();
 
+   if(Locator == true){
+   chrome.findElement(addToCard).click();
+   }else{
+       System.out.println("Element is not present on screen");
+        }
 
     }
 

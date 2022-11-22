@@ -20,20 +20,19 @@ public class AddToCardTest extends OpenBrowser {
 
     }
 
-    @Test
+    @Test(priority = 2, description ="Add Product to Card")
     public void addProduct() throws InterruptedException {
         cardAction();
 
         addToCard.addCard();
 
     }
-    @Test
+    @Test(priority = 3, description ="Add Product to Card")
     public void removeProduct() throws InterruptedException {
 
         addProduct();
-        Thread.sleep(2000);
         addToCard.removeCard();
-        Thread.sleep(2000);
+
 
     }
 

@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name = "System Suite" verbose="1">
+    <test name = "System Tests" >
+        <classes>
+            <class name="com.tests.LoginPageTest" />
+            <class name="com.tests.AddToCardTest" />
+            <class name="com.tests.YourCardTest" />
+            <class name="com.tests.CheckoutTest" />
+        </classes>
+    </test>
+</suite>

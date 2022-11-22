@@ -10,7 +10,7 @@ public class LoginPageTest extends OpenBrowser {
     LoginPage login;
 
 
-       @Test
+       @Test(priority = 1, description = "Prerequisite Login")
        public void EnterApp() throws InterruptedException {
 
            login= new LoginPage(chrome);
