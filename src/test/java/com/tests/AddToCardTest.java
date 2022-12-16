@@ -1,8 +1,8 @@
 package com.tests;
 
 import com.OpenBrowser;
-import com.pageobjects.AddToCard;
-import com.pageobjects.LoginPage;
+import com.implementations.AddToCard;
+import com.implementations.LoginPage;
 import org.testng.annotations.Test;
 
 public class AddToCardTest extends OpenBrowser {

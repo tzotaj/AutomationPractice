@@ -1,7 +1,7 @@
 package com.tests;
 
 import com.OpenBrowser;
-import com.pageobjects.LoginPage;
+import com.implementations.LoginPage;
 import org.testng.annotations.Test;
 
 

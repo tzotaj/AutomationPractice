@@ -1,6 +1,6 @@
 package com;
 
-import com.mystore.BaseClass;
+import com.driver.BaseClass;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

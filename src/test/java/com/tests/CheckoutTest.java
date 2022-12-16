@@ -1,10 +1,10 @@
 package com.tests;
 
 import com.OpenBrowser;
-import com.pageobjects.AddToCard;
-import com.pageobjects.Checkout;
-import com.pageobjects.LoginPage;
-import com.pageobjects.YourCard;
+import com.implementations.AddToCard;
+import com.implementations.Checkout;
+import com.implementations.LoginPage;
+import com.implementations.YourCard;
 import org.testng.annotations.Test;
 
 
