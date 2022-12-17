@@ -1,36 +1,43 @@
 package com.tests;
 
 import com.OpenBrowser;
+import com.components.ProductComponent;
+import com.components.ProductListComponent;
 import com.implementations.AddToCard;
 import com.implementations.LoginPage;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AddToCardTest extends OpenBrowser {
 
     AddToCard addToCard;
     LoginPage loginPage;
 
+
     public void cardAction() throws InterruptedException {
         addToCard = new AddToCard(chrome);
         loginPage = new LoginPage(chrome);
 
-        loginPage.loginUser("standard_user","secret_sauce");
+        loginPage.loginUser("standard_user", "secret_sauce");
         Thread.sleep(2000);
-
-
     }
 
-    @Test(priority = 2, description ="Add Product to Card")
+    @Test(priority = 2, description = "Add Product to Card")
+
+
     public void addProduct() throws InterruptedException {
         cardAction();
-
+        addToCard.clickProductsGeaterthen5();
         addToCard.addCard();
 
     }
-    @Test(priority = 3, description ="Add Product to Card")
+
+    @Test(priority = 3, description = "Add Product to Card")
     public void removeProduct() throws InterruptedException {
 
-        addProduct();
+        //addProduct();
         addToCard.removeCard();
 
 
