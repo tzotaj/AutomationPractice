@@ -1,1 +1,0 @@
-{"uuid":"e00cb6c9-5017-4e96-9732-0438459f4d0b","name":"com.OpenBrowser.openChrome","children":["e6ea9120-d2cb-467f-9038-4fce1120cdef"],"description":"","befores":[{"name":"openChrome","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1669108967758,"stop":1669108969548}],"afters":[],"start":1669108967758,"stop":1669108969548}

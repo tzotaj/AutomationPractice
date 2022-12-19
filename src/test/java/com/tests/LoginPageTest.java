@@ -6,21 +6,14 @@ import org.testng.annotations.Test;
 
 
 public class LoginPageTest extends OpenBrowser {
+    LoginPage login;        //krijojme nje objekt te klases login ne menyre qe te perdorim metodat e kesaj klase
 
-    LoginPage login;
+    @Test(priority = 1, description = "Prerequisite Login")
+    public void EnterApp() throws InterruptedException {
 
+        login = new LoginPage(chrome);
 
-       @Test(priority = 1, description = "Prerequisite Login")
-       public void EnterApp() throws InterruptedException {
+        login.loginUser("standard_user", "secret_sauce");
 
-           login= new LoginPage(chrome);
-
-           login.loginUser("standard_user","secret_sauce");
-
-       }
-
-
-
-
-
+    }
 }

@@ -17,10 +17,9 @@ public class YourCardTest extends OpenBrowser {
         login = new LoginPage(chrome);
         addtocard = new AddToCard(chrome);
 
-        login.loginUser("standard_user","secret_sauce");
+        login.loginUser("standard_user", "secret_sauce");
         addtocard.addCard();
         yourcard.viewCard();
-
 
     }
 }

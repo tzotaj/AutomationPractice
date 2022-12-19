@@ -22,11 +22,10 @@ public class CheckoutTest extends OpenBrowser {
         addToCard = new AddToCard(chrome);
         login = new LoginPage(chrome);
 
-        login.loginUser("standard_user","secret_sauce");
+        login.loginUser("standard_user", "secret_sauce");
         addToCard.addCard();
         yourCard.viewCard();
-        checkout.proceedToCheckout("Tedi","Zotaj","2001");
-
+        checkout.proceedToCheckout("Tedi", "Zotaj", "2001");
 
     }
 
