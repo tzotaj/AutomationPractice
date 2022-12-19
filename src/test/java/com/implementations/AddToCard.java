@@ -25,19 +25,17 @@ public class AddToCard {
         Select select = new Select(ddown);
         select.selectByValue("lohi");
 
-        List<WebElement> allProd = chrome.findElements(priceBar);        // pricet
+        List<WebElement> allProd = chrome.findElements(priceBar);        // pricebar permban price si dhe butonin add to card
 
         for (WebElement prod : allProd) {
             if (Double.valueOf(prod.findElement(prices).getText().substring(1)) >= 30) {
                 prod.findElement(By.tagName("button")).click();
-                System.out.println(prod.getText());
             }
         }
 
         for (WebElement prod : allProd) {
             if (Double.valueOf(prod.findElement(prices).getText().substring(1)) <= 10) {
                 prod.findElement(By.tagName("button")).click();
-                System.out.println(prod.getText());
             }
         }
     }

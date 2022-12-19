@@ -5,18 +5,17 @@ import org.openqa.selenium.WebDriver;
 
 import static org.testng.Assert.assertEquals;
 
-import org.apache.logging.log4j.*;
+import com.report.Logs;
 
 public class LoginPage {
-    private final By loginUsername = By.id("user-name");
+    private final By loginUsername = By.id("user-name");        //deklarojm locators
     private final By loginPassword = By.id("password");
     private final By submitLogin = By.name("login-button");
     private final By title = By.xpath("//span[contains(text(),'Products')]");
+    WebDriver chrome; //inicializojm chrome driver
 
-    private static Logger demologger = LogManager.getLogger(LoginPage.class.getName());
-    WebDriver chrome;
+    public LoginPage(WebDriver chrome) {    //krijojme instancen e klases LoginPage
 
-    public LoginPage(WebDriver chrome) {
         this.chrome = chrome;
     }
 
@@ -28,7 +27,7 @@ public class LoginPage {
 
         String ExpectedText = chrome.findElement(title).getText(); //get text lexon string, merr vleren e stringut;
         assertEquals("PRODUCTS", ExpectedText);
-        demologger.info("Login is successful");
+        Logs.info("Loggin successful");
     }
 
 
