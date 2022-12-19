@@ -7,8 +7,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.concurrent.TimeUnit;
 
-public class BaseClass {       //driver init
-    public WebDriver driver; //deklarim i variables webdriver
+public class BaseClass {
+    public WebDriver driver;
 
     public WebDriver initializeDriver() {               //Metoda qe inicializon chrome driver
 

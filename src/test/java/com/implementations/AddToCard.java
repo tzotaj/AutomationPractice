@@ -42,5 +42,5 @@ public class AddToCard {
 
     public void removeCard() {
         chrome.findElement(remove).click();
-    }
+    } //remove nje product
 }

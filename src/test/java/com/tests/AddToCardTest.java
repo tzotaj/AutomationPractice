@@ -20,8 +20,6 @@ public class AddToCardTest extends OpenBrowser {
     }
 
     @Test(priority = 2, description = "Add Product to Card")
-
-
     public void addProduct() {
         cardAction();
         addToCard.addCard();

@@ -4,7 +4,6 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
 public class Logs {
-
     private static final Logger Log = LoggerFactory.getLogger(Logs.class.getName());
 
     // This is to print log for the beginning of the test case.
